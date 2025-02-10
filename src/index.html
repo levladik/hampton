@@ -3,59 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Hampton</title>
   </head>
 
   <body class="flex flex-row flex-wrap">
     <header
-      class="flex flex-col justify-between bg-[#e6e6e6] w-[100%] md:w-[250px] lg:w-[300px] pt-[100px] md:order-2 sticky top-0 md:h-screen overflow-auto"
+      class="fixed md:sticky md:flex flex-col justify-between bg-[#e6e6e6] w-[100%] md:w-[250px] lg:w-[300px] md:pt-[50px] md:order-2 top-0 md:h-screen overflow-hidden z-10"
     >
-      <nav class="flex justify-center">
-        <ul
-          class="hidden md:block uppercase flex flex-col gap-[14px] text-[12px] text-[#4d4d4d]"
-        >
-          <li class="active-menu"><a href="#">Главная</a></li>
-          <li><a href="#">Номера</a></li>
-          <li><a href="#">Галерея</a></li>
-          <li><a href="#">Номера</a></li>
-          <li><a href="#">Спец предложения</a></li>
-          <li><a href="#">Мероприятия </a></li>
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">Достопримечательности</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      <div class="text-center text-[#4d4d4d]">
-        <div class="flex justify-center gap-[14px] mb-[14px]">
-          <img class="social-icon" src="./assets/icons/vk.svg" alt="" />
-          <img class="social-icon" src="./assets/icons/facebook.svg" alt="" />
-          <img class="social-icon" src="./assets/icons/twitter.svg" alt="" />
-          <img class="social-icon" src="./assets/icons/OK.svg" alt="" />
-          <img
-            class="social-icon ta-icon"
-            src="./assets/icons/tripadvisor.svg"
-            alt=""
-          />
+      <div
+        class="flex justify-between items-center px-[30px] py-[20px] md:hidden"
+      >
+        <div class="flex gap-[20px]">
+          <div class="burger"></div>
+          <p>Меню</p>
         </div>
-        <div class="pb-[35px]">
-          <p>© 2015. Все права защищены.</p>
-          <p class="languages">
-            Язык:
-            <span class="languages-rus cursor-pointer active-language">RU</span>
-            / <span class="languages-eng cursor-pointer">ENG</span>
-          </p>
-        </div>
-        <button
-          class="book-button w-[100%] cursor-pointer text-[24px] bg-[#004890] text-white py-[30px] md:py-[60px]"
-        >
-          Забронировать
-        </button>
+        <a href="#"
+          ><img
+            class="w-[75px] cursor-pointer"
+            src="./assets/images/logo.png"
+            alt="logo"
+        /></a>
       </div>
+      <div class="menu flex flex-col justify-between h-[100%]">
+        <nav class="flex justify-center">
+          <ul
+            class="uppercase flex flex-col gap-[14px] mb-[50px] text-[12px] text-[#4d4d4d]"
+          >
+            <li class="active-menu"><a href="#">Главная</a></li>
+            <li><a href="#">Номера</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Номера</a></li>
+            <li><a href="#">Спец предложения</a></li>
+            <li><a href="#">Мероприятия </a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Достопримечательности</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="hidden md:block text-center text-[#4d4d4d]">
+          <div class="flex justify-center gap-[14px] mb-[14px]">
+            <img class="social-icon" src="./assets/icons/vk.svg" alt="" />
+            <img class="social-icon" src="./assets/icons/facebook.svg" alt="" />
+            <img class="social-icon" src="./assets/icons/twitter.svg" alt="" />
+            <img class="social-icon" src="./assets/icons/OK.svg" alt="" />
+            <img
+              class="social-icon ta-icon"
+              src="./assets/icons/tripadvisor.svg"
+              alt=""
+            />
+          </div>
+          <div class="pb-[35px]">
+            <p>© 2015. Все права защищены.</p>
+            <p class="languages">
+              Язык:
+              <span class="languages-rus cursor-pointer active-language"
+                >RU</span
+              >
+              / <span class="languages-eng cursor-pointer">ENG</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="book-button w-[100%] cursor-pointer text-[24px] bg-[#004890] text-white py-[30px] md:py-[60px]"
+      >
+        Забронировать
+      </button>
     </header>
     <main class="w-[100%] md:w-[calc(100%-250px)] lg:w-[calc(100%-300px)]">
-      <section id="hero" class="md:h-screen relative">
-        <div class="video-wrapper w-[100%] h-[100%] block md:absolute top-0 left-0">
+      <section id="hero" class="h-screen relative">
+        <div
+          class="video-wrapper w-[100%] h-[100%] block md:absolute top-0 left-0"
+        >
           <video
             class="w-[100%] h-[100%] object-cover"
             autoplay
@@ -75,43 +95,110 @@
           </video>
         </div>
         <div
-          class="md:w-[100%] flex justify-between items-center text-white block md:absolute top-[60px] px-[40px] lg:px-[60px] xl:px-[100px]"
+          class="hidden md:w-[100%] md:flex justify-between items-center text-white block md:absolute top-[60px] px-[40px] lg:px-[60px] xl:px-[100px]"
         >
-          <img
-            class="cursor-pointer"
-            src="./assets/images/logo.png"
-            alt="Hampton"
-          />
+          <a href="#">
+            <img
+              class="cursor-pointer"
+              src="./assets/images/logo.png"
+              alt="Hampton"
+            />
+          </a>
           <div class="flex gap-[40px] flex-wrap justify-center">
             <div class="flex items-center gap-[20px] text-[12px] uppercase">
               <p>
                 Местное <br />
                 время
               </p>
-              <p class="local-time text-[30px]">10:23</p>
+              <p class="local-time text-[30px]"></p>
             </div>
 
             <div class="flex items-center gap-[20px] text-[12px] uppercase">
               <p>Погода <br />Влдгоград</p>
-              <p class="local-weather text-[30px]">+ 27 C</p>
+              <p class="local-weather text-[30px]"></p>
             </div>
           </div>
         </div>
-        <div class="absolute left-[60px] bottom-[100px]">
-          <p class="welcome-text text-white text-[24px] md:text-[48px] xl:text-[60px] mb-[50px]">
+        <div class="absolute left-[20px] md:left-[60px] bottom-[100px]">
+          <p
+            class="welcome-text text-white text-[24px] md:text-[48px] xl:text-[60px] mb-[50px]"
+          >
             Добро пожаловать в отель<br />
             Hampton Volgograd
           </p>
           <p class="text-white text-[14px]">
-            The energizing new hotel in the <br>
-            neighborhood. Offering simple pleasures, <br>
-            thoughtful extras and nice surprises. <br>
-            For a stay that’s positively yours. <br>
+            The energizing new hotel in the <br />
+            neighborhood. Offering simple pleasures, <br />
+            thoughtful extras and nice surprises. <br />
+            For a stay that’s positively yours. <br />
           </p>
         </div>
       </section>
 
-      <section id="sections" class="bg-green-300 h-[1000px]">SECTIONS</section>
+      <section id="sections" class="md:h-screen h-auto">
+        <div class="sections-wrapper">
+          <div class="rooms">
+            <img src="./assets/images/1.jpg" alt="rooms" />
+            <p class="left-0 bottom-0">Уютные номера</p>
+          </div>
+          <div class="events">
+            <img src="./assets/images/2.jpg" alt="events" />
+            <p class="text-white left-0 bottom-0">Организация <br> мероприятий</p>
+          </div>
+          <div class="gallery">
+            <img src="./assets/images/3.jpg" alt="gallery" />
+            <p class="text-white left-0 top-0">Галерея отеля</p>
+          </div>
+          <div class="servises">
+            <img src="./assets/images/4.jpg" alt="servises" />
+            <p class="text-white right-0 bottom-0">Услуги 24 часа</p>
+          </div>
+          <div class="offers">
+            <img src="./assets/images/5.jpg" alt="offers" />
+            <p class="left-0 bottom-0 text-white">Специальные <br> предложения</p>
+          </div>
+          <div class="places">
+            <img src="./assets/images/6.jpg" alt="places" />
+            <p class="text-white right-0 bottom-[30%]">Что посетить <br> в Волгограде</p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="bg-[#e6e6e6]">
+          <div class="text-center text-[#4d4d4d] pb-[34px] pt-[50px] md:hidden">
+            <div class="flex justify-center gap-[14px]">
+              <img class="social-icon" src="./assets/icons/vk.svg" alt="" />
+              <img
+                class="social-icon"
+                src="./assets/icons/facebook.svg"
+                alt=""
+              />
+              <img
+                class="social-icon"
+                src="./assets/icons/twitter.svg"
+                alt=""
+              />
+              <img class="social-icon" src="./assets/icons/OK.svg" alt="" />
+              <img
+                class="social-icon ta-icon"
+                src="./assets/icons/tripadvisor.svg"
+                alt=""
+              />
+            </div>
+            <div class="pb-[35px]">
+              <p>© 2015. Все права защищены.</p>
+              <p class="languages">
+                Язык:
+                <span class="languages-rus cursor-pointer active-language"
+                  >RU</span
+                >
+                / <span class="languages-eng cursor-pointer">ENG</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
+    <script type="module" src="./scripts/main.ts"></script>
   </body>
 </html>
